@@ -18,7 +18,7 @@ const ProductCard2: FC<{ item: any }> = ({ item }) => {
       const result = await res.json()
       console.log(result)
       toast.success('Added to cart successfully!', {
-        position: 'bottom-right',
+        position: 'top-right',
         autoClose: 3000, // 3 seconds
         hideProgressBar: true,
      
