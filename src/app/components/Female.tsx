@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-const ProductCard: FC<{ item: any }> = ({ item }) => {
+const ProductCard2: FC<{ item: any }> = ({ item }) => {
   const handleAddToCart = async () => {
     const res = await fetch('/api/cart', {
       method: 'POST',
@@ -44,4 +44,4 @@ const ProductCard: FC<{ item: any }> = ({ item }) => {
   )
 }
 
-export default ProductCard
+export default ProductCard2

@@ -19,6 +19,7 @@ import { Image as IImage } from 'sanity'
 import { urlForImage } from '../../../sanity/lib/image'
 import ProductCard from './ProductCard'
 import StripeCheckOutButton from './Checkout'
+import ProductCard2 from '../Female/page'
 
 export const getProductData=async ()=>{
   const res=await client.fetch(`*[_type=='product']`);
@@ -114,33 +115,14 @@ const Main = async() => {
           <p className='uppercase text-blue-600 font-semibold mb-4 '>PRODUCTS</p>
           <p className='capitalize  font-bold content-center text-4xl  '>Check What We Have</p>
         </div>
-        <div className='flex mt-16  '>
-          <div className='flex-col text-gray-900 font-semibold text-lg w-1/3'>
-          <Image src={i4} alt='product image' className='w-full'></Image>
-           <p className='capitalize mt-1 '>brushed raglan sweatshirt</p>
-           <p className='mt-1'>$195</p>
-          </div>
-          <div className='  flex-col text-gray-900 font-semibold text-lg w-1/3'>
-          <Image src={i5} alt='product image' className='w-full '></Image>
-          <p className='capitalize mt-1 '>Cameryn Sash Tie Dress</p>
-           <p className='mt-1'>$545</p>
-          </div>
-         
-          <div className='flex-col text-gray-900 font-semibold text-lg w-1/3'>
-          <Image src={i6} alt='product image' className='w-full'></Image>
-          <p className='capitalize mt-1 '>FLex Sweatshirt</p>
-           <p className='mt-1'>$175</p>
-
-          </div>
-          
-
-        </div>
+       
         <div className='flex mt-16  '>
         {data && data.map((item:any,i:number)=>(
          
 
           <div className='  gap-x-10 flex-col text-gray-900 font-semibold text-lg w-1/3'key={i}>
             <ProductCard item={item}/>
+       
             <div className=' grid grid-cols-[auto,auto,auto] justify center'>
             </div>
           </div>
